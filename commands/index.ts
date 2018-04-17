@@ -10,7 +10,7 @@ import close from './close'
 import configuration from './configuration'
 
 // when installed, this file lives in dist/commands/, so need to go
-// two levels down to reach the directory where package.json lives: 
+// two levels down to reach the directory where package.json lives:
 const PACKAGE_PATH = path.resolve(__dirname, '..', '..', 'package.json')
 const PACKAGE = JSON.parse(fs.readFileSync(PACKAGE_PATH).toString())
 const BASE_DIR = '.machinomy'
