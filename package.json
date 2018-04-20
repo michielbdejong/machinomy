@@ -35,7 +35,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@machinomy/contracts": "^4.0.5",
+    "@machinomy/contracts": "4.0.5",
     "@machinomy/types-truffle-contract": "^0.0.3",
     "@machinomy/types-web3": "^0.0.4",
     "@types/bignumber.js": "^4.0.2",
@@ -57,6 +57,7 @@
     "prompt": "^1.0.0",
     "request": "^2.76.0",
     "safe-buffer": "^5.1.1",
+    "truffle-hdwallet-provider": "0.0.3",
     "types-bn": "^0.0.1",
     "types-ethereumjs-util": "^0.0.8",
     "types-rlp": "^0.0.1",
