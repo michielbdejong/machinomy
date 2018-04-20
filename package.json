@@ -35,7 +35,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@machinomy/contracts": "^4.0.5",
+    "@machinomy/contracts": "^4.0.9",
     "@machinomy/types-truffle-contract": "^0.0.3",
     "@machinomy/types-web3": "^0.0.4",
     "@types/bignumber.js": "^4.0.2",
