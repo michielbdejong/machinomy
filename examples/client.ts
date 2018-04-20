@@ -7,12 +7,17 @@ let f = (async () => {
   /**
    * Account that send payments payments.
    */
-  let sender = '0x5bf66080c92b81173f470e25f9a12fc146278429'
+  // let sender = '0x5bf66080c92b81173f470e25f9a12fc146278429'
 
   /**
    * Geth must be run on local machine, or use another web3 provider.
    */
-  let provider = new Web3.providers.HttpProvider('http://localhost:8545')
+  // let provider = new Web3.providers.HttpProvider('http://localhost:8545')
+
+  const HDWalletProvider = require('truffle-hdwallet-provider')
+  let provider = new HDWalletProvider(process.env.SECRET, process.env.PROVIDER_URL)
+  let sender = '0x' + provider.address.substring(2).toLowerCase()
+
   let web3 = new Web3(provider)
 
   /**

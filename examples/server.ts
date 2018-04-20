@@ -34,12 +34,17 @@ let fetch = require('whatwg-fetch').fetch
 /**
  * Account that receives payments.
  */
-let receiver = '0x3155694d7558eec974cfe35eaa3c2c7bcebb793f'
+// let receiver = '0x3155694d7558eec974cfe35eaa3c2c7bcebb793f'
 
 /**
  * Geth must be run on local machine, or use another web3 provider.
  */
-let provider = new Web3.providers.HttpProvider(process.env.MACHINOMY_GETH_ADDR)
+// let provider = new Web3.providers.HttpProvider(process.env.MACHINOMY_GETH_ADDR)
+
+const HDWalletProvider = require('truffle-hdwallet-provider')
+let provider = new HDWalletProvider(process.env.SECRET, process.env.PROVIDER_URL)
+let receiver = '0x' + provider.address.substring(2).toLowerCase()
+
 let web3 = new Web3(provider)
 
 /**

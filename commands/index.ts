@@ -9,7 +9,7 @@ import channels from './channels'
 import close from './close'
 import configuration from './configuration'
 
-const PACKAGE_PATH = path.resolve(__dirname, '..', 'package.json')
+const PACKAGE_PATH = path.resolve(__dirname, '..', '..', 'package.json')
 const PACKAGE = JSON.parse(fs.readFileSync(PACKAGE_PATH).toString())
 const BASE_DIR = '.machinomy'
 const CONFIGURATION_FILE = 'config.json'
